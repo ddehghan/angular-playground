@@ -19,9 +19,9 @@ export async function run() {
         return await buildAngularCli(config.angularAppName, config.baseHref, config.angularCliMaxBuffer);
     }
 
-    if (config.verifySandboxes) {
-        config.angularCliPort = await findFirstFreePort('127.0.0.1', 7000, 9000);
-    }
+    //if (config.verifySandboxes) {
+    //    config.angularCliPort = await findFirstFreePort('127.0.0.1', 7000, 9000);
+    //}
 
     if (config.watch || config.verifySandboxes) {
         startWatch(config.sourceRoot, () => buildSandboxes(config.sourceRoot, config.chunk));
